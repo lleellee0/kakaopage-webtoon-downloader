@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Kakaopage Webtoon Downloader</title>
+    <!-- CSS by https://codepen.io/frytyler/pen/EGdtg -->
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <span style="font-size: 14px; color: white;" onclick="window.open('https://github.com/lleellee0/daum-webtoon-downloader/blob/master/README.md', '_blank')">How to use?</span>||
+    <span style="font-size: 14px; color: white;" onclick="window.open('list.html', '_blank', 'width=800,height=800')">Viewer</span>
+    <div class="download">
+    	<h1>Kakaopage Webtoon Downloader</h1>
+        <form method="post" onsubmit="return downloadWebtoon();">
+          <input id="seriesId" class="input-text" type="text" name="seriesId" placeholder="seriesId" required="required"/>
+          <input id="fake-path" class="input-text" type="path" placeholder="Select Download Path" required="required"/>
+          <input id="path" type="file" name="path" placeholder="Download Path" webkitdirectory/>
+          <button id="download" type="submit" class="btn btn-primary btn-block btn-large">
+            Start Download</button>
+            <hr>
+            <span style="font-size: 14px; color: white;">Below are required for adult certification</span>
+            <input id="hmCu" class="input-text" type="text" name="hm_cu" placeholder="HM_CU(optional)"/>
+            <input id="hts" class="input-text" type="text" name="hts" placeholder="HTS(optional)"/>
+            <input id="prof" class="input-text" type="text" name="prof" placeholder="PROF(optional)"/>
+            <input id="ts" class="input-text" type="text" name="ts" placeholder="TS(optional)"/>
+            <input id="lsid" class="input-text" type="text" name="lsid" placeholder="LSID(optional)"/>
+        </form>
+        <div>
+          <textarea id="logArea" class="input-text" style="height: 150px; resize: none;" disabled></textarea>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="./js/function.js"></script>
+  </body>
+</html>
